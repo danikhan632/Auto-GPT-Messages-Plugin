@@ -6,7 +6,7 @@ class MessageClient:
         self.api_key = os.environ.get('IMESSAGE_PASSWORD_KEY')
         self.base_url = os.environ.get('IMESSAGE_BASE_URL')
         self.headers = {
-            "api_key": api_key
+            "api_key": self.api_key 
         }
 
     def send_message(self, recipient, message, is_name=True):
