@@ -3,8 +3,8 @@ import os
 
 class MessageClient:
     def __init__(self):
-        self.api_key = str(os.environ.get('IMESSAGE_PASSWORD_KEY'),"password")
-        self.base_url = str(os.environ.get('IMESSAGE_BASE_URL'), "http://127.0.0.1:5000/")
+        self.api_key = (os.environ.get('IMESSAGE_PASSWORD_KEY'),"password")
+        self.base_url = (os.environ.get('IMESSAGE_BASE_URL'), "http://127.0.0.1:5000/")
         self.headers = {
             "api_key": self.api_key 
         }
