@@ -3,7 +3,7 @@ from typing import Any, Dict, List, Optional, Tuple, TypeVar, TypedDict
 from auto_gpt_plugin_template import AutoGPTPluginTemplate
 
 
-from .messages import Messanger
+from .messages import MessageClient
 
 PromptGenerator = TypeVar("PromptGenerator")
 
@@ -22,7 +22,7 @@ class AutoGPTMessagesPlugin(AutoGPTPluginTemplate):
         self._name = "Auto-GPT-Messages"
         self._version = "0.1.0"
         self._description = "This is a plugin for AutoGPT to send and get iMessage texts"
-        self.cli= Messanger()
+        self.cli= MessageClient()
         
 
     def post_prompt(self, prompt: PromptGenerator) -> PromptGenerator:
