@@ -31,7 +31,7 @@ class MessageClient:
     def get_recent_contacts(self,api_key, num_contacts=10):
         url = f"{self.base_url}/recent_contacts"
         params = {"num_contacts": num_contacts}
-        response = requests.get(url, headers=headers, params=params)
+        response = requests.get(url, headers=self.headers, params=params)
 
         if response.status_code == 200:
             return response.json()["recent_contacts"]
