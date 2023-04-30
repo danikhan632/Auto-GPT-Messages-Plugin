@@ -52,7 +52,7 @@ class AutoGPTMessagesPlugin(AutoGPTPluginTemplate):
                 "recipient": "<recipient>",
                 "message": "<message>",
             },
-            self.cli.send_messages
+            self.cli.send_message
         )
         prompt.add_command(
             "Get people",
@@ -60,7 +60,7 @@ class AutoGPTMessagesPlugin(AutoGPTPluginTemplate):
             {
                 "Number of contacts": "<num_contacts>",
             },
-            self.cli.recent_contacts
+            self.cli.get_recent_contacts
         ),
         return prompt
 # ______________________________________________________________________________________________________________________

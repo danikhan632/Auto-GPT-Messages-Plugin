@@ -29,7 +29,7 @@ class MessageClient:
         return response.json()
 
     def get_recent_contacts(api_key, num_contacts=10):
-        url = f"{base_url}/recent_contacts"
+        url = f"{self.base_url}/recent_contacts"
         params = {"num_contacts": num_contacts}
         response = requests.get(url, headers=headers, params=params)
 
