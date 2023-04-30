@@ -30,8 +30,7 @@ class AutoGPTMessagesPlugin(AutoGPTPluginTemplate):
             "Get Messages",
             "get_messages",
             {
-                "Number of messages": "<num_messages>",
-                "include sent messages": "<sent>",
+                "num_messages": "<num_messages>",
             },
             self.cli.get_messages
         ),
@@ -39,9 +38,8 @@ class AutoGPTMessagesPlugin(AutoGPTPluginTemplate):
             "Get person messages",
             "get person messages",
             {
-                "contact":"<person>",
-                "Number of messages": "<num_messages>",
-                "include sent messages": "<sent>",
+                "person":"<person>",
+                "num_messages": "<num_messages>",
             },
             self.cli.get_person_messages
         ),
@@ -58,7 +56,7 @@ class AutoGPTMessagesPlugin(AutoGPTPluginTemplate):
             "Get people",
             "get contacts",
             {
-                "Number of contacts": "<num_contacts>",
+                "num_contacts": "<num_contacts>",
             },
             self.cli.get_recent_contacts
         ),
