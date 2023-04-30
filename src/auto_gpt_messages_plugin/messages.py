@@ -3,8 +3,8 @@ import os
 
 class MessageClient:
     def __init__(self):
-        self.api_key = os.environ.get('imessage_password_key')
-        self.base_url = os.environ.get('imessage_base_url')
+        self.api_key = os.environ.get('IMESSAGE_PASSWORD_KEY')
+        self.base_url = os.environ.get('IMESSAGE_BASE_URL')
         self.headers = {
             "api_key": api_key
         }

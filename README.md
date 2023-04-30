@@ -43,8 +43,8 @@ cd plugins; git clone https://github.com/danikhan632/Auto-GPT-Messages-Plugin.gi
 
    ``` shell
    ALLOWLISTED_PLUGINS=AutoGPTMessagesPlugin
-   imessage_password_key= your_password_key
-   imessage_base_url=your_imessage_server_url
+   IMESSAGE_PASSWORD_KEY=your_password_key
+   IMESSAGE_BASE_URL=your_imessage_server_url
    ```
 
    If the plugin is not allowlisted, you will be warned before it's loaded.
