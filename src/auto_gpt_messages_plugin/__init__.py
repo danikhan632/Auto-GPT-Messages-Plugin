@@ -44,8 +44,8 @@ class AutoGPTMessagesPlugin(AutoGPTPluginTemplate):
             self.cli.get_person_messages
         ),
         prompt.add_command(
-            "send messages",
-            "Send messages",
+            "send message",
+            "Send message",
             {
                 "recipient": "<recipient>",
                 "message": "<message>",
