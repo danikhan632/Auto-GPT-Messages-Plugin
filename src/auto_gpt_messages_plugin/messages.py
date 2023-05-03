@@ -9,12 +9,18 @@ class MessageClient:
             "api_key": self.api_key 
         }
 
-    def send_message(self, recipient, message, is_name=False):
+    def send_message(self, recipient, message):
         url = f"{self.base_url}/send"
         payload = {
             "recipient": recipient,
             "message": message
         }
+        
+        is_name=True
+        nums= sum(char.isdigit() for char in recipient)
+        if nums > 6:
+            is_name=False
+        
         response = requests.post(url, json=payload, headers=self.headers, params={"name": is_name})
         return response.json()
 
